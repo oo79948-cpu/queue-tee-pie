@@ -15,7 +15,8 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(cutie_test tests/cutie_test.cpp src/cutie.cpp
+        src/cutie.hpp)
+add_executable(main main.cpp src/cutie.cpp)
 
-target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(cutie_test PRIVATE Catch2::Catch2WithMain)
